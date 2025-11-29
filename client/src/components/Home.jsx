@@ -36,7 +36,7 @@ function Home() {
     <div style={styles.container}>
       <div style={styles.heroSection}>
         <img
-          src="client/image.png"
+          src="/robot.png"   // <-- FIXED
           alt="AI Robot Icon"
           style={styles.robotImage}
         />
@@ -48,7 +48,7 @@ function Home() {
 
       <div style={styles.contentBox}>
         <img
-          src="WhatsApp Image 2025-05-28 at 21.04.50_7d8d2a03.jpg"
+          src="/simulation.jpg"   // <-- FIXED
           alt="AI Simulation"
           style={styles.inlineImage}
         />
