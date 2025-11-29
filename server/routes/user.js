@@ -10,15 +10,15 @@ const auth = (req, res, next) => {
   if (!token) return res.status(401).json({ error: "Access denied" });
 
   try {
-    const decoded = jwt.verify(token, process.env.WhatIsYourName);  
+    const decoded = jwt.verify(token, process.env.WhatIsYourName);
     req.userId = decoded.id;
     next();
-  } catch {
+  } catch (err) {
     res.status(400).json({ error: "Invalid token" });
   }
 };
 
-// Route to get current user
+// Get current user
 router.get("/me", auth, async (req, res) => {
   try {
     const user = await User.findById(req.userId).select("-password");
