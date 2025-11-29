@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import robot from "../assets/robot.png";               // <-- IMPORT
+import simulation from "../assets/simulation.jpg";     // <-- IMPORT
 
 function Home() {
   const paragraphs = [
@@ -35,23 +37,24 @@ function Home() {
   return (
     <div style={styles.container}>
       <div style={styles.heroSection}>
-        <img
-          src="/robot.png"   // <-- FIXED
-          alt="AI Robot Icon"
-          style={styles.robotImage}
-        />
-        <h1 style={styles.title}>Welcome to <span style={styles.brand}>Liflect</span> 🧠</h1>
+
+        {/* FIXED IMAGE PATH */}
+        <img src={robot} alt="AI Robot Icon" style={styles.robotImage} />
+
+        <h1 style={styles.title}>
+          Welcome to <span style={styles.brand}>Liflect</span> 🧠
+        </h1>
+
         <p style={styles.subtitle}>
           Your <strong>AI-powered parallel self simulator</strong>.
         </p>
       </div>
 
       <div style={styles.contentBox}>
-        <img
-          src="/simulation.jpg"   // <-- FIXED
-          alt="AI Simulation"
-          style={styles.inlineImage}
-        />
+
+        {/* FIXED IMAGE PATH */}
+        <img src={simulation} alt="AI Simulation" style={styles.inlineImage} />
+
         <div>
           {displayedText.map((line, idx) => (
             <p style={styles.text} key={idx}>{line}</p>
@@ -61,57 +64,3 @@ function Home() {
     </div>
   );
 }
-
-const styles = {
-  container: {
-    padding: "2rem",
-    fontFamily: "'Orbitron', sans-serif",
-    backgroundColor: "#0b0c10",
-    color: "#66fcf1",
-    minHeight: "100vh",
-    textAlign: "center",
-  },
-  heroSection: {
-    marginBottom: "3rem",
-  },
-  robotImage: {
-    width: "100px",
-    marginBottom: "1rem",
-  },
-  title: {
-    fontSize: "2.5rem",
-    color: "#45a29e",
-  },
-  brand: {
-    color: "#66fcf1",
-  },
-  subtitle: {
-    fontSize: "1.2rem",
-    color: "#c5c6c7",
-  },
-  contentBox: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    gap: "2rem",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    backgroundColor: "#1f2833",
-    padding: "2rem",
-    borderRadius: "12px",
-    boxShadow: "0 0 15px #66fcf180",
-  },
-  inlineImage: {
-    width: "200px",
-    borderRadius: "10px",
-  },
-  text: {
-    maxWidth: "500px",
-    fontSize: "1rem",
-    marginBottom: "1rem",
-    color: "#c5c6c7",
-    whiteSpace: "pre-wrap",
-  },
-};
-
-export default Home;
