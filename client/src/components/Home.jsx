@@ -36,7 +36,7 @@ function Home() {
     <div style={styles.container}>
       <div style={styles.heroSection}>
         <img
-          src="https://cdn-icons-png.flaticon.com/512/4712/4712106.png"
+          src="client/WhatsApp Image 2025-05-28 at 21.04.50_7d8d2a03.jpg"
           alt="AI Robot Icon"
           style={styles.robotImage}
         />
