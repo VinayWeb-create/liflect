@@ -21,7 +21,7 @@ app.use(express.static('public'));
 // Routes
 app.use('/api', storyRoute);
 app.use('/api/auth', authRoute);
-app.use('/api/user/me', userRoute);
+app.use('/api/user', userRoute);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
