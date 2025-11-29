@@ -3,7 +3,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
 import storyRoute from './routes/storyRoute.js';
-import authRoute from './routes/auth.js'; // Auth route for login/register
+import authRoute from './routes/auth.js';
+import userRoute from './routes/userRoute.js'; // <-- Good!
 
 dotenv.config();
 
@@ -19,8 +20,9 @@ app.use(express.json());
 app.use(express.static('public')); 
 
 // Routes
-app.use('/api', storyRoute);         // For story-related routes
-app.use('/api/auth', authRoute);     // For authentication routes
+app.use('/api', storyRoute);           // Story routes
+app.use('/api/auth', authRoute);       // Login / Signup
+app.use('/api/user', userRoute);       // <-- ADD THIS LINE
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
