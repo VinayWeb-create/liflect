@@ -1,0 +1,106 @@
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #0b0c10;
+  color: #66fcf1;
+  padding: 1rem;
+  overflow: auto;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 0 10px rgba(102, 252, 241, 0.2);
+  z-index: 1000;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Sidebar hidden (slide out) */
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+/* Toggle button */
+.fixed-hamburger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  font-size: 2rem;
+  background: transparent;
+  color: #66fcf1;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sidebar header (logo or title) */
+.sidebar-header {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #45a29e;
+}
+
+/* User greeting */
+.user-greeting {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Auth buttons */
+.auth-buttons {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.btn-auth {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #1f2833;
+  color: #66fcf1;
+  font-weight: bold;
+  border: 1px solid #66fcf1;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn-auth:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+}
+
+/* Navigation links */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #c5c6c7;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar nav a:hover {
+  background-color: #1f2833;
+}
+
+.sidebar nav a.active {
+  background-color: #66fcf1;
+  color: #0b0c10;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 1.3rem;
+}

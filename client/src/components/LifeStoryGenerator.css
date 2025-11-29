@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.story-container {
+  font-family: 'Orbitron', sans-serif;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  color: #66fcf1;
+}
+
+.story-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px #66fcf1;
+}
+
+.loading-text,
+.error-text {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 2rem 0;
+  color: #ff5959;
+}
+
+.story-textarea {
+  width: 100%;
+  min-height: 300px;
+  background-color: #0b0c10;
+  color: #66fcf1;
+  border: 2px solid #45a29e;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: vertical;
+  box-shadow: 0 0 10px #45a29e;
+  transition: 0.3s ease;
+}
+
+.story-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 15px #66fcf1;
+}
+
+.story-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.download-btn,
+.retry-btn,
+.generate-img-btn {
+  background: #45a29e;
+  color: #0b0c10;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #45a29e;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover,
+.retry-btn:hover {
+  background: #66fcf1;
+  color: black;
+  box-shadow: 0 0 20px #66fcf1;
+}
+
+/* Generate Avatar button specific glow */
+.generate-img-btn {
+  background: #6a0dad;
+  color: #ffffff;
+  box-shadow: 0 0 10px #8e44ad;
+}
+
+.generate-img-btn:hover {
+  background: #9b59b6;
+  color: black;
+  box-shadow: 0 0 20px #bd5eff;
+}
+
+.image-gallery {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px dashed #45a29e;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px #66fcf1;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.image-card {
+  background-color: #1f2833;
+  border: 2px solid #45a29e;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px #45a29e;
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+  transform: scale(1.03);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-card p {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #c5c6c7;
+}

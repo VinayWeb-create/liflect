@@ -1,0 +1,203 @@
+/* Layout Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #202020;
+  color: white;
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.sidebar.closed {
+  width: 70px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #444;
+}
+
+/* Hamburger Icon */
+.fixed-hamburger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  background: none;
+  border: none;
+  color: green;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Nav Section */
+.sidebar nav {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #383838;
+  color: white;
+}
+
+/* Icon + Label */
+.sidebar nav .icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.sidebar.closed nav a {
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.sidebar.closed nav .icon {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.sidebar.closed nav .label {
+  display: none;
+}
+
+/* Main content wrapper */
+.main-content-container {
+  margin-left: 240px;
+  transition: margin-left 0.3s ease;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main-content-container.main-content-collapsed {
+  margin-left: 70px;
+}
+
+/* Main content area */
+.main-content {
+  padding: 2rem;
+  background: grey;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .fixed-hamburger {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .sidebar.closed {
+    width: 100% !important;
+  }
+
+  .sidebar-header {
+    display: none;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+  }
+
+  .sidebar nav a {
+    flex-grow: 1;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .sidebar nav .icon {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .sidebar nav .label {
+    display: none;
+  }
+
+  .main-content-container,
+  .main-content-container.main-content-collapsed {
+    margin-left: 0 !important;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
+.auth-buttons {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1000;
+}
+
+.auth-link {
+  background-color: #1a73e8;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.auth-link:hover {
+  background-color: #1558b0;
+}

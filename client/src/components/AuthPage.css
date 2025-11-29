@@ -1,0 +1,30 @@
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #121212;
+  color: #fff;
+}
+
+.auth-card {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.1);
+  width: 300px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.toggle-btn {
+  margin-top: 1rem;
+  background: transparent;
+  color: #00ffcc;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}

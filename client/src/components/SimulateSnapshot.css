@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.snapshot-container {
+  font-family: 'Orbitron', sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #66fcf1;
+  box-shadow: 0 0 20px rgba(101, 255, 241, 0.3);
+  transition: 0.3s ease;
+}
+
+.snapshot-container.dark {
+  background: linear-gradient(135deg, #0b0c10, #1f2833);
+  color: #66fcf1;
+}
+
+.story-editor {
+  width: 100%;
+  background-color: #0b0c10;
+  color: #66fcf1;
+  border: 2px solid #45a29e;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: vertical;
+  box-shadow: 0 0 10px #45a29e;
+  transition: 0.3s ease;
+  margin-top: 1rem;
+}
+
+.story-editor:focus {
+  outline: none;
+  box-shadow: 0 0 15px #66fcf1;
+}
+
+.highlighted-story {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(102, 252, 241, 0.1);
+  border: 1px dashed #66fcf1;
+  border-radius: 10px;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  text-shadow: 0 0 5px #66fcf1;
+}
+
+.timeline-slider {
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+.timeline-slider label {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #66fcf1;
+}
+
+.timeline-slider input[type="range"] {
+  width: 100%;
+  accent-color: #66fcf1;
+}
+
+.mode-toggle,
+.snapshot-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #45a29e;
+  color: #0b0c10;
+  cursor: pointer;
+  box-shadow: 0 0 12px #45a29e;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+  box-shadow: 0 0 20px #66fcf1;
+}
+
+.ratings-chart {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.ratings-chart h3 {
+  font-size: 1.5rem;
+  text-shadow: 0 0 8px #66fcf1;
+}
