@@ -17,8 +17,16 @@ router.post("/signup", async (req, res) => {
     const newUser = new User({ name, email, password: hashedPassword, age });
     await newUser.save();
 
+    // 🔥 Create JWT token during signup (just like login)
+    const token = jwt.sign(
+      { id: newUser._id },
+      process.env.WhatIsYourName,
+      { expiresIn: "1d" }
+    );
+
     res.status(201).json({
       message: "User registered successfully",
+      token,                // ✅ Added token
       name: newUser.name,
       email: newUser.email,
       age: newUser.age,
@@ -27,6 +35,7 @@ router.post("/signup", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 // Login
 router.post("/login", async (req, res) => {
