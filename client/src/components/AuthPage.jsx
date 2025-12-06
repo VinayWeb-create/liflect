@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Login from "./Login.jsx";
 import Signup from "./Signup.jsx";
-import Home from "./Home.jsx";       // <-- FIXED
+import Home from "./Home";       // <-- FIXED
 import "./AuthPage.css";
 
 const AuthPage = () => {
